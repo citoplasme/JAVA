@@ -79,6 +79,10 @@ public class HoteisInc {
 	}
 
 	public int qtsStandard() {
-		
+		return (int) this.hoteis.values().stream().filter(e -> e.getClass() == HotelStandard.class).count();
+	}
+
+	public int qtsPremium() {
+		return (int) this.hoteis.values().stream().filter(e -> e.getClass() == HotelPremium.class).count();
 	}
 }
